@@ -1,0 +1,171 @@
+{
+  "basics": {
+    "name": "Brian Dela Cruz",
+    "label": "Software Engineer",
+    "picture": "",
+    "email": "briandelacruz408@gmail.com",
+    "phone": "(408)806-8714",
+    "website": "https://briandelacruz.com",
+    "summary": "Graduated from Bloc.io's full stack apprenticeship that teaches both frontend and backend technologies. Grew up in the 90's and have always been fascinated by unique user interfaces and emerging technologies. From Tamogochi's, Nintendo 64's, and T-mobile sidekicks, new tech has always amazed me. Seeing how people, communities and habits change through tech is an enlightening experience. I want to be able to use software and the web to assist business, people, and communities at large.",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "Linkedin",
+        "username": "briandelacruz408",
+        "url": ""
+      },
+      {
+        "network": "Github",
+        "username": "bl2i4n",
+        "url": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Victorise",
+      "position": "Software Engineer Intern",
+      "website": "http://victorise.com",
+      "startDate": "2017-11-01",
+      "endDate": "",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "highlights": [
+        "Improve apps response time by debugging bugs",
+        "Composed data scripts to be used throughout app",
+        "Analyzed Augmented Reality avenues for app",
+        "Deliver quality code on time"
+      ]
+    },
+    {
+      "company": "Superfoodbox",
+      "position": "Web Developer Intern",
+      "website": "http://victorise.com",
+      "startDate": "2017-07-01",
+      "endDate": "2017-10-31",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "highlights": [
+        "Redesigned company's main website to flow simpler for users",
+        "Ensured changes made to the desktop website were responsive and ideal for mobile devices.",
+        "Formalized code tracking system for new features and issues",
+        "Collaborate with designer on InvisionApp for feature improvements"
+      ]
+    },
+    {
+      "company": "LiveRamp",
+      "position": "Desktop Support Technician",
+      "website": "http://victorise.com",
+      "startDate": "2014-12-01",
+      "endDate": "",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "highlights": [
+        "Educated users on a wide array of devices including: Macs, iPhones, Windows,
+ Androids, and printers",
+        "Administered conference rooms through BlueJeans Admin, Teem and Google Admin
+ to ensure quality AV",
+        "Composed processes for new users to reduce downtime for common issue"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "company": "Chatme",
+      "position": "Software Engineer Intern",
+      "website": "https://brians-slack.netlify.com/",
+      "startDate": "2017-01-01",
+      "endDate": "2017-03-01",
+      "summary": "Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this object was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    },
+    {
+      "company": "Partimus",
+      "position": "Software Engineer Intern",
+      "website": "http://partimus.org/",
+      "startDate": "2016-01-01",
+      "endDate": "2016-07-15",
+      "summary": "This project was mentioned to me by the East Bay Linux User Group. Here we met regularly to discuss hardware and software options for low income schools and homeless shelters. We tested different linux flavors and applications that would be easily manageable by a teacher or volunteer. We also tested sending updates to the OS or applications remotely. I mainly assisted in testing the hardware and software that was created by the rest of the group. Successfully deployed 2 machines with Arch Linux at a homeless shelter in Oakland, CA.",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    },
+    {
+      "company": "JamOut",
+      "position": "Web Developer Intern",
+      "website": "http://brians-bloc-jams.netlify.com/",
+      "startDate": "2017-07-01",
+      "endDate": "2017-10-31",
+      "summary": "Single-Page Application made with AngularJS, HTML, CSS, Javascript and the Buzz API to handle mp3 files. This responsive app plays a static music file with all the functionality of a mp3 player, from pausing, skipping and turning up the volume. This app was also refactored from jQuery to AngularJS.",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Bloc.io",
+      "area": "Full Stack Apprenticeship",
+      "studyType": "Bootcamp",
+      "startDate": "2016-11-01",
+      "endDate": "2017-08-01",
+      "gpa": "4.0",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Full Stack Development",
+      "level": "Expert",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "C#",
+        "Ruby",
+        "Rails",
+        "jQuery",
+        "AngularJS",
+        "React",
+        "Cordova",
+        "Ionic",
+        "SASS",
+        "Gulp",
+        "Bootstrap",
+        "Node",
+        "MySQL",
+        "MongoDB",
+        "Unity",
+        "Xcode",
+        "Git",
+        "Jira",
+        "Responsive"
+      ]
+    },
+    {
+      "name": "Compression",
+      "level": "Master",
+      "keywords": [
+        "Mpeg",
+        "MP4",
+        "GIF"
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [],
+  "references": []
+}
