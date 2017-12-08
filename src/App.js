@@ -1,24 +1,34 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import logo from './logo.svg';
-import './App.css';
+import Profile from './components/Profile';
+import About from './components/About';
+import Work from './components/Work';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import './styles/App.css';
 
-class App extends Component {
+const App = props => {
+  // const profileData = props.basics;
+  const aboutData = profileData.summary;
+  // const workData = props.work;
+  // const skillsData = props.skills;
+  // const educationData = props.education;
 
-  render() {
+  return(
+    <div className="container">
+      <div className="row">
+        <aside className="col-md-4">
+          <div className="inner">
+          </div>
+        </aside>
+        <main className="col-md-8">
+          <div className="inner">
 
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          </div>
+        </main>
       </div>
-    );
-  }
-}
+    </div>
+  )
+
+};
 
 export default App;
