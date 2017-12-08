@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from  'react';
 import Profile from './components/Profile';
 import About from './components/About';
 import Work from './components/Work';
@@ -39,9 +39,9 @@ class Header extends React.Component {
   render() {
     return (
     <header className="header">
-      <Address street="1 Hacker Way" city="Menlo Park, CA 94025" />
-      <ResumeTitle firstName="Jared" lastName="Dunn" />
-       <ContactInfo email="email@company.com" phone="(123) 456-7890" />
+      <Address street="515 Old Evans Rd." city="Milpitas, CA 95035" />
+      <ResumeTitle firstName="Brian" lastName="Dela Cruz" />
+       <ContactInfo email="briandelacruz408@gmail.com" phone="(408) 806-8714" />
     </header>
     );
   }
@@ -65,7 +65,7 @@ function Skill(props) {
   return (
     <div className="skill">
       <p className="skill__name" contentEditable={true}>{props.item}</p>
-      <div className="skill__rating" icon="star" size="mini" defaultRating={props.rating} maxRating={5} />
+      <div className="skill__rating" icon="star" size="mini"/>
     </div>
   )
 }
@@ -80,26 +80,20 @@ class Skills extends React.Component {
       <div className="ratings">
         <div className="ratings__skills">
           <h3>Skills</h3>
-          <Skill item="HTML5" rating={5} />
-          <Skill item="CSS3" rating={5} />
-          <Skill item="JavaScript" rating={4} />
-          <Skill item="Sass" rating={5} />
-          <Skill item="React" rating={4} />
+          <Skill item="HTML5"/>
+          <Skill item="CSS3"/>
+          <Skill item="JavaScript"  />
+          <Skill item="Sass"/>
+          <Skill item="React"  />
         </div>
         <div className="ratings__skills">
-          <Skill item="Bootstrap" rating={4} />
-          <Skill item="Node.js" rating={5} />
-          <Skill item="Meteor" rating={5} />
-          <Skill item="Redux" rating={3} />
-          <Skill item="MongoDB" rating={4} />
+          <Skill item="Bootstrap"  />
+          <Skill item="Node.js"/>
+          <Skill item="MongoDB"  />
         </div>
         <div className="ratings__tools">
           <h3>Tools</h3>
-          <Skill item="Git" rating={4} />
-          <Skill item="Sketch" rating={5} />
-          <Skill item="Webstorm IDE" rating={5} />
-          <Skill item="iTerm2" rating={4} />
-          <Skill item="VS Code" rating={3} />
+          <Skill item="Git"  />
         </div>
       </div>
     )
@@ -126,8 +120,18 @@ class Experience extends React.Component {
     return (
       <div className="experience">
         <h2 className="heading">EXPERIENCE</h2>
-        <Job jobTitle="HOOLI - FRONT END DEVELOPER //" jobDate="2011 — PRESENT" jobSummary="Affordances user story quantitative vs. qualitative affordances thought leader big data sticky note workflow parallax ideate thinker-maker-doer pair programming. Big data entrepreneur intuitive engaging sticky note fund paradigm thought leader innovate. Physical computing cortado human-centered design user centered design venture capital innovate waterfall is so 2000 and late integrate prototype grok. Sticky note ideate responsive driven viral actionable insight engaging integrate user story integrate." />
-        <Job jobTitle="PIED PIPER — ASSISTANT //" jobDate="2013 — 2016" jobSummary="360 campaign venture capital pivot earned media pivot ship it moleskine venture capital. Bootstrapping long shadow prototype latte engaging user story driven pair programming parallax earned media SpaceTeam. Co-working workflow fund pitch deck human-centered design food-truck parallax driven user centered design sticky note co-working SpaceTeam affordances quantitative vs. qualitative. Sticky note pitch deck actionable insight hacker SpaceTeam paradigm SpaceTeam latte." />
+        <Job jobTitle="Victorise - Software Engineer Intern " jobDate="" jobSummary="Improve apps response time by debugging bugs"/>
+        <Job jobSummary="Composed data scripts to be used throughout app"/>
+        <Job jobSummary="Analyzed Augmented Reality avenues for app"/>
+        <Job jobSummary="Deliver quality code on time"/>
+        <Job jobTitle="Superfoodbox - Web Developer Intern " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
+        <Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/>
+        <Job jobSummary="Formalized code tracking system for new features and issues"/>
+        <Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/>
+        <Job jobTitle="Superfoodbox - Web Developer Intern " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
+        <Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/>
+        <Job jobSummary="Formalized code tracking system for new features and issues"/>
+        <Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/>
       </div>
     );
   }
@@ -165,7 +169,7 @@ class History extends React.Component {
         <h2 className="heading">EDUCATION</h2>
         <Education schoolName="Udacity" schoolLocation="Online Coursework" schoolDegree="Nanodegree" schoolCourse="Full Stack Web Developer // 2017" />
         <Education schoolName="MIT" schoolLocation="Cambridge, MA" schoolDegree="Bachelors of Arts & Science" schoolCourse="Computer Science // 2006 - 2008" />
-        <h2 className="heading">SELECTED WORK</h2>
+        <h2 className="heading">PROJECTS</h2>
         <Project projectTitle="NUCLEUS - FULL END DEVELOPER // 2017" projectUrl="http://chrisbeard.io" projectDesc="Workflow responsive moleskine convergence personas long shadow user centered design fund food-truck. Agile pivot agile 360 campaign quantitative vs. qualitative actionable insight waterfall is so 2000 and late parallax." />
         <Project projectTitle="DISRUPT APP - FRONT END DEVELOPER // 2016" projectUrl="http://chrisbeard.io" projectDesc="Parallax experiential minimum viable product earned media user centered design quantitative vs. qualitative human-centered design latte user centered design convergence sticky note thinker-maker-doer driven." />
       </div>
