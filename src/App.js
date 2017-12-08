@@ -8,7 +8,7 @@ import './styles/App.css';
 
 const App = props => {
   // const profileData = props.basics;
-  const aboutData = profileData.summary;
+  // const aboutData = this.props;
   // const workData = props.work;
   // const skillsData = props.skills;
   // const educationData = props.education;
@@ -22,7 +22,7 @@ const App = props => {
         </aside>
         <main className="col-md-8">
           <div className="inner">
-
+            <About {this.props.summary}/>
           </div>
         </main>
       </div>
