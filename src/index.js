@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactJsonSchema from 'react-json-schema';
 import App from './App';
-
-const json = require('./resume.json');
 
 ReactDOM.render(<App/>, document.getElementById('root'));
