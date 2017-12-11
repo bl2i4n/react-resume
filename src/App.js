@@ -171,14 +171,26 @@ class History extends React.Component {
   render() {
     return (
       <div className="history">
-        <h2 className="heading">EDUCATION</h2>
-        <Education schoolName="Bloc" schoolLocation="Online Bootcamp" schoolDegree="Full Stack Apprenticeship" schoolCourse="Full Stack Web Developer // 2017" />
         <h2 className="heading">PROJECTS</h2>
         <Project projectTitle="Chatme" projectUrl="https://brians-slack.netlify.com/" projectDesc="Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this object was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier" />
         <Project projectTitle="Partimus" projectUrl="http://partimus.org/" projectDesc="This project was mentioned to me by the East Bay Linux User Group. Here we met regularly to discuss hardware and software options for low income schools and homeless shelters. We tested different linux flavors and applications that would be easily manageable by a teacher or volunteer. We also tested sending updates to the OS or applications remotely. I mainly assisted in testing the hardware and software that was created by the rest of the group. Successfully deployed 2 machines with Arch Linux at a homeless shelter in Oakland, CA." />
         <Project projectTitle="JamOut" projectUrl="http://brians-bloc-jams.netlify.com/" projectDesc="Single-Page Application made with AngularJS, HTML, CSS, Javascript and the Buzz API to handle mp3 files. This responsive app plays a static music file with all the functionality of a mp3 player, from pausing, skipping and turning up the volume. This app was also refactored from jQuery to AngularJS." />
       </div>
     );
+  }
+}
+
+class School extends React.Component{
+  constructor(props){
+    super(props)
+  }
+  render(){
+    return(
+      <div className="education">
+        <h2 className="heading">EDUCATION</h2>
+        <Education schoolName="Bloc" schoolLocation="Online Bootcamp" schoolDegree="Full Stack Apprenticeship" schoolCourse="Full Stack Web Developer // 2017" />
+      </div>
+    )
   }
 }
 
@@ -198,6 +210,7 @@ class App extends React.Component {
           <History />
           <Skills />
         </div>
+        <School />
       </div>
     );
   }
