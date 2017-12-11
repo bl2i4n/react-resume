@@ -6,27 +6,26 @@ import './styles/App.css';
 
 function ResumeTitle(props) {
   return (
-    <div className="name" contentEditable={true}>
-      <h2 className="name__first">{props.firstName}</h2>
-      <h1 className="name__last">{props.lastName}</h1>
+    <div className="" >
+      <h2 className="text-center">{props.firstName} {props.lastName}</h2>
+      <h2 className="text-center">{props.label}</h2>
     </div>
   )
 }
 
 function Address(props) {
   return (
-   <div className="address" contentEditable={true}>
-    <span className="address__street">{props.street}</span>
-    <span className="address__city">{props.city}</span>
+   <div className="" >
+    <span className="">{props.street}</span>
+    <span className="">{props.city}</span>
   </div>
   )
 }
 
 function ContactInfo(props) {
   return (
-    <div className="contact" contentEditable={true}>
+    <div className="contact" >
       <span className="contact__email">{props.email}</span>
-      <span className="contact__phone">{props.phone}</span>
     </div>
   )
 }
@@ -38,11 +37,14 @@ class Header extends React.Component {
 
   render() {
     return (
-    <header className="header">
-      <Address street="515 Old Evans Rd." city="Milpitas, CA 95035" />
+    <div>
+      <div className="profileImg"><img role="presentation" className="img-circle center-block" src={"./public/profilePhoto.jpg"} width="200" /></div>
       <ResumeTitle firstName="Brian" lastName="Dela Cruz" />
-       <ContactInfo email="briandelacruz408@gmail.com" phone="(408) 806-8714" />
-    </header>
+      <ResumeTitle label="Software Engineer" />
+      <Address city="Milpitas, CA" />
+      <ContactInfo email="briandelacruz408@gmail.com" />
+
+    </div>
     );
   }
 }
@@ -54,9 +56,12 @@ class Summary extends React.Component {
 
   render() {
     return (
-        <p className="summary" contentEditable={true}>
-          {this.props.summary}
-        </p>
+        <div>
+          <h2>About</h2>
+          <p className="summary" >
+            {this.props.summary}
+          </p>
+        </div>
     );
   }
 }
@@ -64,10 +69,47 @@ class Summary extends React.Component {
 function Skill(props) {
   return (
     <div className="skill">
-      <p className="skill__name" contentEditable={true}>{props.item}</p>
-      <div className="skill__rating" icon="star" size="mini"/>
+      <p className="skill__name" >{props.item}</p>
+      <div className="skill__rating" size="mini"/>
     </div>
   )
+}
+
+function Job(props) {
+  return (
+    <div className="job">
+      <span className="job__title" >{props.jobTitle}</span>
+      <span className="job__date">{props.jobDate}</span>
+      <p className="job__summary" >{props.jobSummary}</p>
+    </div>
+  )
+}
+
+class Experience extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+  render() {
+    return (
+      <div className="experience">
+        <h2 className="heading">EXPERIENCE</h2>
+        <Job jobTitle="Victorise - Software Engineer Intern " jobDate="" jobSummary="Improve apps response time by debugging bugs"/>
+        <Job jobSummary="Composed data scripts to be used throughout app"/>
+        <Job jobSummary="Analyzed Augmented Reality avenues for app"/>
+        <Job jobSummary="Deliver quality code on time"/>
+        <Job jobTitle="Superfoodbox - Web Developer Intern " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
+        <Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/>
+        <Job jobSummary="Formalized code tracking system for new features and issues"/>
+        <Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/>
+        <Job jobTitle="LiveRamp - Desktop Support Technician " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
+        <Job jobSummary="Educated users on a wide array of devices including: Macs, iPhones, Windows, Androids, and printers"/>
+        <Job jobSummary="Administered conference rooms through BlueJeans Admin, Teem and Google Admin to ensure quality AV"/>
+        <Job jobSummary="Composed processes for new users to reduce downtime for common issue" />
+      </div>
+    );
+  }
 }
 
 class Skills extends React.Component {
@@ -100,50 +142,13 @@ class Skills extends React.Component {
   }
 }
 
-function Job(props) {
-  return (
-    <div className="job">
-      <span className="job__title" contentEditable={true}>{props.jobTitle}</span>
-      <span className="job__date">{props.jobDate}</span>
-      <p className="job__summary" contentEditable={true}>{props.jobSummary}</p>
-    </div>
-  )
-}
-
-class Experience extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-
-  render() {
-    return (
-      <div className="experience">
-        <h2 className="heading">EXPERIENCE</h2>
-        <Job jobTitle="Victorise - Software Engineer Intern " jobDate="" jobSummary="Improve apps response time by debugging bugs"/>
-        <Job jobSummary="Composed data scripts to be used throughout app"/>
-        <Job jobSummary="Analyzed Augmented Reality avenues for app"/>
-        <Job jobSummary="Deliver quality code on time"/>
-        <Job jobTitle="Superfoodbox - Web Developer Intern " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
-        <Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/>
-        <Job jobSummary="Formalized code tracking system for new features and issues"/>
-        <Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/>
-        <Job jobTitle="Superfoodbox - Web Developer Intern " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
-        <Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/>
-        <Job jobSummary="Formalized code tracking system for new features and issues"/>
-        <Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/>
-      </div>
-    );
-  }
-}
-
 function Education(props) {
   return(
     <div className="school">
-      <span className="school__name" contentEditable={true}>{props.schoolName}</span>
-      <span className="school__location" contentEditable={true}>{props.schoolLocation}</span>
-      <span className="school__degree" contentEditable={true}>{props.schoolDegree}</span>
-      <span className="school__cos" contentEditable={true}>{props.schoolCourse}</span>
+      <span className="school__name" >{props.schoolName}</span>
+      <span className="school__location" >{props.schoolLocation}</span>
+      <span className="school__degree" >{props.schoolDegree}</span>
+      <span className="school__cos" >{props.schoolCourse}</span>
     </div>
   )
 }
@@ -151,9 +156,9 @@ function Education(props) {
 function Project(props) {
   return(
     <div className="project">
-      <span className="project__title" contentEditable={true}>{props.projectTitle}</span>
-      <span className="project__url" contentEditable={true}>{props.projectUrl}</span>
-      <span className="project__desc" contentEditable={true}>{props.projectDesc}</span>
+      <span className="project__title" >{props.projectTitle}</span>
+      <span className="project__url" >{props.projectUrl}</span>
+      <span className="project__desc" >{props.projectDesc}</span>
     </div>
   )
 }
@@ -167,39 +172,16 @@ class History extends React.Component {
     return (
       <div className="history">
         <h2 className="heading">EDUCATION</h2>
-        <Education schoolName="Udacity" schoolLocation="Online Coursework" schoolDegree="Nanodegree" schoolCourse="Full Stack Web Developer // 2017" />
-        <Education schoolName="MIT" schoolLocation="Cambridge, MA" schoolDegree="Bachelors of Arts & Science" schoolCourse="Computer Science // 2006 - 2008" />
+        <Education schoolName="Bloc" schoolLocation="Online Bootcamp" schoolDegree="Full Stack Apprenticeship" schoolCourse="Full Stack Web Developer // 2017" />
         <h2 className="heading">PROJECTS</h2>
-        <Project projectTitle="NUCLEUS - FULL END DEVELOPER // 2017" projectUrl="http://chrisbeard.io" projectDesc="Workflow responsive moleskine convergence personas long shadow user centered design fund food-truck. Agile pivot agile 360 campaign quantitative vs. qualitative actionable insight waterfall is so 2000 and late parallax." />
-        <Project projectTitle="DISRUPT APP - FRONT END DEVELOPER // 2016" projectUrl="http://chrisbeard.io" projectDesc="Parallax experiential minimum viable product earned media user centered design quantitative vs. qualitative human-centered design latte user centered design convergence sticky note thinker-maker-doer driven." />
+        <Project projectTitle="Chatme" projectUrl="https://brians-slack.netlify.com/" projectDesc="Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this object was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier" />
+        <Project projectTitle="Partimus" projectUrl="http://partimus.org/" projectDesc="This project was mentioned to me by the East Bay Linux User Group. Here we met regularly to discuss hardware and software options for low income schools and homeless shelters. We tested different linux flavors and applications that would be easily manageable by a teacher or volunteer. We also tested sending updates to the OS or applications remotely. I mainly assisted in testing the hardware and software that was created by the rest of the group. Successfully deployed 2 machines with Arch Linux at a homeless shelter in Oakland, CA." />
+        <Project projectTitle="JamOut" projectUrl="http://brians-bloc-jams.netlify.com/" projectDesc="Single-Page Application made with AngularJS, HTML, CSS, Javascript and the Buzz API to handle mp3 files. This responsive app plays a static music file with all the functionality of a mp3 player, from pausing, skipping and turning up the volume. This app was also refactored from jQuery to AngularJS." />
       </div>
     );
   }
 }
 
-class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <footer className="footer">
-        <div className="footer__inner" contentEditable={true}>
-          <div>
-            <div name='briefcase' /> {this.props.portfolioUrl}
-          </div>
-          <div>
-            <div name='phone square' /> {this.props.phoneNumber}
-          </div>
-          <div>
-            <div name='mail' /> {this.props.email}
-          </div>
-        </div>
-      </footer>
-    );
-  }
-}
 
 class App extends React.Component {
   constructor(props) {
@@ -210,13 +192,12 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Summary summary="Cortado Steve Jobs parallax parallax waterfall is so 2000 and late thought leader iterate pair programming physical computing. Thinker-maker-doer thinker-maker-doer earned media integrate grok latte experiential responsive innovate unicorn. Waterfall is so 2000 and late cortado thinker-maker-doer thought leader actionable insight big data earned media long shadow ideate waterfall is so 2000 and late." />
-        <Skills />
+        <Summary summary="Graduated from Bloc.io's full stack apprenticeship that teaches both frontend and backend technologies. Grew up in the 90's and have always been fascinated by unique user interfaces and emerging technologies. From Tamogochi's, Nintendo 64's, and T-mobile sidekicks, new tech has always amazed me. Seeing how people, communities and habits change through tech is an enlightening experience. I want to be able to use software and the web to assist business, people, and communities at large." />
         <div className="qualifications">
           <Experience />
           <History />
+          <Skills />
         </div>
-        <Footer portfolioUrl="http://chrisbeard.io" phoneNumber="(123) 456-7890" email="email@company.com" />
       </div>
     );
   }
