@@ -60,7 +60,7 @@ class Summary extends React.Component {
 function Skill(props) {
   return (
     <div className="">
-      <p className="" >{props.item}</p>
+      <p className="">{props.item}</p>
       <div className=""/>
     </div>
   )
@@ -105,7 +105,7 @@ class Skills extends React.Component {
   render() {
     return (
       <section className="skills">
-        <div className="">
+        <div className="skills-list list-inline">
           <h2 className="heading"><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
           <Skill className="label label-success" item="HTML5"/>
           <Skill item="CSS3"/>
