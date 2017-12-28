@@ -3,7 +3,7 @@ import './styles/App.css';
 
 function ResumeTitle(props) {
   return (
-    <div className="text-center">
+    <div className="profileImg">
       <h2 className="text-center">{props.firstName} {props.lastName}</h2>
       <h2 className="text-center">{props.label}</h2>
     </div>
@@ -12,30 +12,33 @@ function ResumeTitle(props) {
 
 function Address(props) {
   return (
-   <div className="text-center" >
-    <span className="text-center">{props.street}</span>
-    <span className="">{props.city}</span>
-  </div>
-  )
-}
-
-function ContactInfo(props) {
-  return (
-    <div className="" >
-      <span className="">{props.email}</span>
+    <div>
+      <ul className="list-unstyled contact-links text-center">
+        <li><i className="fa fa-lg fa-location-arrow"></i>{props.street} {props.city}</li>
+        <li><i className="fa fa-lg fa-envelope"></i><a href={`mailto:briandelacruz408@gmail.com`}>{props.email}</a></li>
+      </ul>
+      <ul className="profileLinks list-inline text-center">
+        <li><a className="fa fa-github fa-2x" href={'https://github.com/bl2i4n'}></a></li>
+        <li><a className="fa fa-linkedin fa-2x" href={'https://linkedin.com/in/briandelacruz408/'}></a></li>
+        <li><a className="fa fa-wordpress fa-2x" href={'https://codehog.wordpress.com/'}></a></li>
+      </ul>
+      <p>This site is powered by <a href="https://facebook.github.io/react/">React</a> components. The full source code can be found in <a href="https://github.com/bl2i4n">my Github repo</a>.</p>
     </div>
   )
 }
 
+
 class Header extends React.Component {
   render() {
     return (
-      <div className="about">
-        <div><img role="presentation" className="img-circle center-block" src={"./profilePhoto.jpg"} width="200" /></div>
-        <ResumeTitle firstName="Brian" lastName="Dela Cruz" />
-        <ResumeTitle label="Software Engineer" />
-        <Address city="Milpitas, CA" />
-        <ContactInfo email="briandelacruz408@gmail.com" />
+      <div className="profileImg">
+        <img role="presentation" className="img-circle center-block" src={"./profilePhoto.jpg"} width="200" />
+        <ResumeTitle className="text-center" firstName="Brian" lastName="Dela Cruz" />
+        <ResumeTitle className="text-center" label="Software Engineer" />
+        <div className="divider"></div>
+          <Address city="Milpitas, CA"  email="briandelacruz408@gmail.com"/>
+        <div className="divider"></div>
+
       </div>
     );
   }
@@ -44,8 +47,8 @@ class Header extends React.Component {
 class Summary extends React.Component {
   render() {
     return (
-        <section>
-          <h2 className="heading">ABOUT</h2>
+        <section className="about">
+          <h2 className="heading"><i className="fa fa-lg fa-user"></i>ABOUT</h2>
           <p className="summary" >
             {this.props.summary}
           </p>
@@ -78,7 +81,7 @@ class Experience extends React.Component {
   render() {
     return (
       <section className="work">
-        <h2 className="text-uppercase">WORK EXPERIENCE</h2>
+        <h2 className="text-uppercase"><i className="fa fa-lg fa-building"></i>WORK EXPERIENCE</h2>
         <Job jobTitle="Victorise - Software Engineer Intern"/>
         <Job  jobDate="" jobSummary="Improve apps response time by debugging bugs"/>
         <Job jobSummary="Composed data scripts to be used throughout app"/>
@@ -103,7 +106,7 @@ class Skills extends React.Component {
     return (
       <section className="skills">
         <div className="">
-          <h2 className="heading">SKILLS</h2>
+          <h2 className="heading"><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
           <Skill className="label label-success" item="HTML5"/>
           <Skill item="CSS3"/>
           <Skill item="JavaScript"  />
@@ -134,7 +137,7 @@ function Project(props) {
     <div className="project">
       <span className="" >{props.projectTitle}</span>
       <span className="" >{props.projectUrl}</span>
-      <span className="" >{props.projectDesc}</span>
+      <div className="" >{props.projectDesc}</div>
     </div>
   )
 }
@@ -145,10 +148,16 @@ class History extends React.Component {
     return (
       <section>
       <div className="">
-        <h2 className="heading">PROJECTS</h2>
-        <Project projectTitle="Chatme" projectUrl="https://brians-slack.netlify.com/" projectDesc="Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this object was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier" />
-        <Project projectTitle="Partimus" projectUrl="http://partimus.org/" projectDesc="This project was mentioned to me by the East Bay Linux User Group. Here we met regularly to discuss hardware and software options for low income schools and homeless shelters. We tested different linux flavors and applications that would be easily manageable by a teacher or volunteer. We also tested sending updates to the OS or applications remotely. I mainly assisted in testing the hardware and software that was created by the rest of the group. Successfully deployed 2 machines with Arch Linux at a homeless shelter in Oakland, CA." />
-        <Project projectTitle="JamOut" projectUrl="http://brians-bloc-jams.netlify.com/" projectDesc="Single-Page Application made with AngularJS, HTML, CSS, Javascript and the Buzz API to handle mp3 files. This responsive app plays a static music file with all the functionality of a mp3 player, from pausing, skipping and turning up the volume. This app was also refactored from jQuery to AngularJS." />
+        <h2 className="heading"><i className="fa fa-lg fa-file-code-o"></i>PROJECTS</h2>
+        <a href={`https://brians-slack.netlify.com/`} target="_blank">Chatme</a>
+        <Project projectTitle=""  projectUrl="" projectDesc="Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this object was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier" />
+        <br/>
+        <a href={`https://partimus.org/`} target="_blank">Partimus</a>
+        <Project projectTitle="" projectUrl="" projectDesc="This project was mentioned to me by the East Bay Linux User Group. Here we met regularly to discuss hardware and software options for low income schools and homeless shelters. We tested different linux flavors and applications that would be easily manageable by a teacher or volunteer. We also tested sending updates to the OS or applications remotely. I mainly assisted in testing the hardware and software that was created by the rest of the group. Successfully deployed 2 machines with Arch Linux at a homeless shelter in Oakland, CA." />
+        <br/>
+        <a href={`https://brians-bloc-jams.netlify.com/`} target="_blank">JamOut</a>
+        <Project projectTitle="" projectUrl="" projectDesc="Single-Page Application made with AngularJS, HTML, CSS, Javascript and the Buzz API to handle mp3 files. This responsive app plays a static music file with all the functionality of a mp3 player, from pausing, skipping and turning up the volume. This app was also refactored from jQuery to AngularJS." />
+        <br/>
       </div>
       </section>
     );
@@ -161,7 +170,7 @@ class School extends React.Component{
     return(
       <section className="education">
         <div className="education">
-          <h2 className="heading">EDUCATION</h2>
+          <h2 className="heading"><i className="fa fa-lg fa-mortar-board"></i>EDUCATION</h2>
             <h3>
               <Education schoolName="Bloc" schoolLocation=" Online Bootcamp"/>
             </h3>
@@ -182,11 +191,11 @@ class App extends React.Component {
           <aside className="col-md-4">
           <div className="inner">
             <Header />
-            <Summary summary="Graduated from Bloc.io's full stack apprenticeship that teaches both frontend and backend technologies. Grew up in the 90's and have always been fascinated by unique user interfaces and emerging technologies. From Tamogochi's, Nintendo 64's, and T-mobile sidekicks, new tech has always amazed me. Seeing how people, communities and habits change through tech is an enlightening experience. I want to be able to use software and the web to assist business, people, and communities at large." />
           </div>
           </aside>
           <main className="col-md-8">
             <div className="inner">
+              <Summary summary="Graduated from Bloc.io's full stack apprenticeship that teaches both frontend and backend technologies. Grew up in the 90's and have always been fascinated by unique user interfaces and emerging technologies. From Tamogochi's, Nintendo 64's, and T-mobile sidekicks, new tech has always amazed me. Seeing how people, communities and habits change through tech is an enlightening experience. I want to be able to use software and the web to assist business, people, and communities at large." />
               <Experience />
               <History />
               <Skills />
