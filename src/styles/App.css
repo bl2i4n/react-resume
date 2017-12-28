@@ -1,3 +1,11 @@
+.weird {
+  background-color: green;
+}
+
+.test {
+  color: red;
+}
+
 body {
   background: #f0f0f0;
 }
@@ -21,7 +29,7 @@ h1 {
 h2 {
   font-size: 20px;
   margin-top: 10px;
-  color: #777;
+  color: black;
 }
 h3 {
   font-size: 16px;
