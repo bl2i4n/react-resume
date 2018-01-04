@@ -60,8 +60,7 @@ class Summary extends React.Component {
 function Skill(props) {
   return (
     <div className="">
-        <label type="button" className="btn btn-success skill-list">{props.item}</label>
-      <div className=""/>
+        <label id="side" type="button" className="btn btn-success skill-list">{props.item}</label>
     </div>
   )
 }
@@ -112,9 +111,9 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <section className="side">
-        <div id="">
-          <h2 className="heading"><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
+      <section className="">
+        <div className="skills">
+          <h2 className=""><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
           <Skill item="HTML5"/>
           <Skill item="CSS3"/>
           <Skill item="Sass"/>
@@ -182,9 +181,9 @@ class School extends React.Component{
 
   render(){
     return(
-      <section className="">
-        <div className="">
-          <h2 className="heading"><i className="fa fa-lg fa-mortar-board"></i>EDUCATION</h2>
+      <section className="education">
+        <div className="education">
+          <h2 className=""><i className="fa fa-lg fa-mortar-board"></i>EDUCATION</h2>
             <h3>
               <Education schoolName="Bloc" schoolLocation=" Online Bootcamp"/>
             </h3>
