@@ -16,6 +16,11 @@ li#links{
   float: left;
 }
 
+#side {
+  float:left;
+  margin: 5px;
+}
+
 body {
   background: #f0f0f0;
 }
