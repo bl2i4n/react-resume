@@ -13,16 +13,16 @@ function ResumeTitle(props) {
 function Address(props) {
   return (
     <div>
-      <ul className="list-unstyled contact-links text-center">
+      <ul className="list-unstyled contact-links text-center" id="personal">
         <li><i className="fa fa-lg fa-location-arrow"></i>{props.street} {props.city}</li>
         <li><i className="fa fa-lg fa-envelope"></i><a href={`mailto:briandelacruz408@gmail.com`}>{props.email}</a></li>
       </ul>
-      <ul className="profileLinks list-inline text-center">
-        <li><a className="fa fa-github fa-2x" href={'https://github.com/bl2i4n'}></a></li>
-        <li><a className="fa fa-linkedin fa-2x" href={'https://linkedin.com/in/briandelacruz408/'}></a></li>
+      <ul className="profileLinks list-inline text-center" id="personal">
+        <li id="links"><a className="fa fa-github fa-2x" href={'https://github.com/bl2i4n'}></a></li>
+        <li id="links"><a className="fa fa-linkedin fa-2x" href={'https://linkedin.com/in/briandelacruz408/'}></a></li>
         <li><a className="fa fa-wordpress fa-2x" href={'https://codehog.wordpress.com/'}></a></li>
       </ul>
-      <p>This site is powered by <a href="https://facebook.github.io/react/">React</a> components. The full source code can be found in <a href="https://github.com/bl2i4n">my Github repo</a>.</p>
+      <p>This site is powered by <a href="https://facebook.github.io/react/">React</a> components. The resume is still in the works and the code can be found in <a href="https://github.com/bl2i4n">my Github repo</a>.</p>
     </div>
   )
 }
@@ -82,19 +82,27 @@ class Experience extends React.Component {
     return (
       <section className="work">
         <h2 className="text-uppercase"><i className="fa fa-lg fa-building"></i>WORK EXPERIENCE</h2>
-        <Job jobTitle="Victorise - Software Engineer Intern"/>
-        <Job  jobDate="" jobSummary="Improve apps response time by debugging bugs"/>
-        <Job jobSummary="Composed data scripts to be used throughout app"/>
-        <Job jobSummary="Analyzed Augmented Reality avenues for app"/>
-        <Job jobSummary="Deliver quality code on time"/>
-        <Job jobTitle="Superfoodbox - Web Developer Intern " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
-        <Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/>
-        <Job jobSummary="Formalized code tracking system for new features and issues"/>
-        <Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/>
-        <Job jobTitle="LiveRamp - Desktop Support Technician " jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" />
-        <Job jobSummary="Educated users on a wide array of devices including: Macs, iPhones, Windows, Androids, and printers"/>
-        <Job jobSummary="Administered conference rooms through BlueJeans Admin, Teem and Google Admin to ensure quality AV"/>
-        <Job jobSummary="Composed processes for new users to reduce downtime for common issue" />
+        <h3><Job jobTitle="Victorise - Software Engineer Intern"/></h3>
+        <ul>
+          <li><Job jobDate="" jobSummary="Improve apps response time by debugging bugs"/></li>
+          <li><Job jobSummary="Composed data scripts to be used throughout app"/></li>
+          <li><Job jobSummary="Analyzed Augmented Reality avenues for app"/></li>
+          <li><Job jobSummary="Deliver quality code on time"/></li>
+        </ul>
+        <h3><Job jobTitle="Superfoodbox - Web Developer Intern " /></h3>
+        <ul>
+          <li><Job jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" /></li>
+          <li><Job jobSummary="Ensured changes made to the desktop website were responsive and ideal for mobile devices."/></li>
+          <li><Job jobSummary="Formalized code tracking system for new features and issues"/></li>
+          <li><Job jobSummary="Collaborate with designer on InvisionApp for feature improvements"/></li>
+        </ul>
+        <h3><Job jobTitle="LiveRamp - Desktop Support Technician " /></h3>
+        <ul>
+          <li><Job jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" /></li>
+          <li><Job jobSummary="Educated users on a wide array of devices including: Macs, iPhones, Windows, Androids, and printers"/></li>
+          <li><Job jobSummary="Administered conference rooms through BlueJeans Admin, Teem and Google Admin to ensure quality AV"/></li>
+          <li><Job jobSummary="Composed processes for new users to reduce downtime for common issue" /></li>
+        </ul>
       </section>
     );
   }
@@ -107,14 +115,20 @@ class Skills extends React.Component {
       <section className="skills">
         <div className="skills-list list-inline">
           <h2 className="heading"><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
-          <Skill className="label label-success" item="HTML5"/>
-          <Skill item="CSS3"/>
-          <Skill item="JavaScript"  />
+          <Skill bsStyle="info" className="btn btn-primary" item="HTML5"/>
+          <Skill bsStyle="info" item="CSS3"/>
           <Skill item="Sass"/>
-          <Skill item="React"  />
           <Skill item="Bootstrap"  />
+          <Skill item="JavaScript"  />
+          <Skill item="React"  />
           <Skill item="Node.js"/>
+          <Skill item="AngularJS"  />
+          <Skill item="PixiJS"  />
+          <Skill item="MEAN Stack"  />
+          <Skill item="Ionic"  />
           <Skill item="MongoDB"  />
+          <Skill item="Ruby on Rails"  />
+          <Skill item="Unity"  />
         </div>
       </section>
     )
@@ -195,7 +209,7 @@ class App extends React.Component {
           </aside>
           <main className="col-md-8">
             <div className="inner">
-              <Summary summary="Graduated from Bloc.io's full stack apprenticeship that teaches both frontend and backend technologies. Grew up in the 90's and have always been fascinated by unique user interfaces and emerging technologies. From Tamogochi's, Nintendo 64's, and T-mobile sidekicks, new tech has always amazed me. Seeing how people, communities and habits change through tech is an enlightening experience. I want to be able to use software and the web to assist business, people, and communities at large." />
+              <Summary summary="Graduated from Bloc.io's full stack apprenticeship that teaches both frontend and backend technologies. Grew up in the 90's and have always been fascinated by unique user interfaces and emerging technologies. From Tamogochi's, Nintendo 64's, and T-mobile sidekicks, new tech has always amazed me. Seeing how people, communities and habits change through tech is an enlightening experience. I want to be able to use software and the web to assist businesses, people, and communities at large." />
               <Experience />
               <History />
               <Skills />

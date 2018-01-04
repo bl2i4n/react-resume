@@ -6,6 +6,16 @@
   color: red;
 }
 
+ul#personal {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+}
+
+li#links{
+  float: left;
+}
+
 body {
   background: #f0f0f0;
 }
@@ -78,9 +88,7 @@ a {
 .about, .work, .education, .skills {
   margin-bottom: 30px;
 }
-.skills-list li {
-  font-size: 18px;
-}
+
 .workDates {
   color: #777;
 }
