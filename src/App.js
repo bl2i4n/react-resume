@@ -59,8 +59,8 @@ class Summary extends React.Component {
 
 function Skill(props) {
   return (
-    <div className="">
-        <label id="side" type="button" className="btn btn-success skill-list">{props.item}</label>
+    <div className="" id="side">
+        <label type="button" className="btn btn-success skill-list">{props.item}</label>
     </div>
   )
 }
@@ -182,7 +182,7 @@ class School extends React.Component{
   render(){
     return(
       <section className="education">
-        <div className="education">
+        <div className="education" id="move">
           <h2 className=""><i className="fa fa-lg fa-mortar-board"></i>EDUCATION</h2>
             <h3>
               <Education schoolName="Bloc" schoolLocation=" Online Bootcamp"/>

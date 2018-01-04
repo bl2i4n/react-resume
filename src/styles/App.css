@@ -21,6 +21,11 @@ li#links{
   margin: 5px;
 }
 
+#move{
+  padding-top: 25px;
+  float: left;
+}
+
 body {
   background: #f0f0f0;
 }
