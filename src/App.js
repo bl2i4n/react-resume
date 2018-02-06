@@ -14,13 +14,13 @@ function Address(props) {
   return (
     <div>
       <ul className="list-unstyled contact-links text-center" id="personal">
-        <li><i className="fa fa-lg fa-location-arrow"></i>{props.street} {props.city}</li>
+        <li><i className="fa fa-lg fa-location-arrow"></i>{props.city}</li>
         <li><i className="fa fa-lg fa-envelope"></i><a href={`mailto:briandelacruz408@gmail.com`}>{props.email}</a></li>
       </ul>
       <ul className="profileLinks list-inline text-center" id="personal">
         <li id="links"><a className="fa fa-github fa-2x" href={'https://github.com/bl2i4n'}></a></li>
         <li id="links"><a className="fa fa-linkedin fa-2x" href={'https://linkedin.com/in/briandelacruz408/'}></a></li>
-        <li><a className="fa fa-wordpress fa-2x" href={'https://codehog.wordpress.com/'}></a></li>
+        <li id="links"><a className="fa fa-wordpress fa-2x" href={'https://codehog.wordpress.com/'}></a></li>
       </ul>
       <p>This site is powered by <a href="https://facebook.github.io/react/">React</a> components. The resume is still in the works and the code can be found in <a href="https://github.com/bl2i4n">my Github repo</a>.</p>
     </div>
@@ -32,7 +32,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className="profileImg">
-        <img role="presentation" className="img-circle center-block" src={"./profilePhoto.jpg"} width="200" />
+        <img role="presentation" className="img-circle center-block" src={"./profilePhoto.jpg"} width="200" id="centerpic"/>
         <ResumeTitle className="text-center" firstName="Brian" lastName="Dela Cruz" />
         <ResumeTitle className="text-center" label="Software Engineer" />
         <div className="divider"></div>
@@ -60,7 +60,7 @@ class Summary extends React.Component {
 function Skill(props) {
   return (
     <div className="" id="side">
-        <label type="button" className="btn btn-success skill-list">{props.item}</label>
+        <label type="button" id="buts" className="btn btn-success skill-list">{props.item}</label>
     </div>
   )
 }
@@ -114,7 +114,7 @@ class Skills extends React.Component {
       <section className="">
         <div className="skills">
           <h2 className=""><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
-          <Skill item="HTML5"/>
+          <Skill item="HTML5" id="buts"/>
           <Skill item="CSS3"/>
           <Skill item="Sass"/>
           <Skill item="Bootstrap"  />
