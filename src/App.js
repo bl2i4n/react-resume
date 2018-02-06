@@ -60,7 +60,7 @@ class Summary extends React.Component {
 function Skill(props) {
   return (
     <div className="" id="side">
-        <label type="button" id="buts" className="btn btn-success skill-list">{props.item}</label>
+        <label type="button" id="buts" className="btn">{props.item}</label>
     </div>
   )
 }
@@ -111,7 +111,7 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <section className="">
+      <section className="skills">
         <div className="skills">
           <h2 className=""><i className="fa fa-lg fa-cogs"></i>SKILLS</h2>
           <Skill item="HTML5" id="buts"/>
@@ -163,7 +163,7 @@ class History extends React.Component {
       <div className="">
         <h2 className="heading"><i className="fa fa-lg fa-file-code-o"></i>PROJECTS</h2>
         <a href={`https://brians-slack.netlify.com/`} target="_blank">Chatme</a>
-        <Project projectTitle=""  projectUrl="" projectDesc="Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this object was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier" />
+        <Project projectTitle=""  projectUrl="" projectDesc="Used Firebase and Angular to create a real time chat application. Firebase would be our backend database, and Angular would be the framework for the HTML, CSS, and logic of the application. The fun part of this project was seeing objects such as chat rooms and messages. I also had fun styling this project to look similar to modern chat applications such as Slack. The difficult part of this project was using a cookie to store the username and attaching the message to that username. In the end I was able to chat with friends easier" />
         <br/>
         <a href={`https://partimus.org/`} target="_blank">Partimus</a>
         <Project projectTitle="" projectUrl="" projectDesc="This project was mentioned to me by the East Bay Linux User Group. Here we met regularly to discuss hardware and software options for low income schools and homeless shelters. We tested different linux flavors and applications that would be easily manageable by a teacher or volunteer. We also tested sending updates to the OS or applications remotely. I mainly assisted in testing the hardware and software that was created by the rest of the group. Successfully deployed 2 machines with Arch Linux at a homeless shelter in Oakland, CA." />
@@ -181,8 +181,8 @@ class School extends React.Component{
 
   render(){
     return(
-      <section className="education">
-        <div className="education" id="move">
+      <section className="education" id="move">
+        <div className="education">
           <h2 className=""><i className="fa fa-lg fa-mortar-board"></i>EDUCATION</h2>
             <h3>
               <Education schoolName="Bloc" schoolLocation=" Online Bootcamp"/>
