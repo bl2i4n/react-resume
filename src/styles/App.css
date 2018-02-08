@@ -35,8 +35,6 @@ li#links{
 #move{
   position: relative;
   float:left;
-  top: 60px;
-  right: 75px;
 }
 
 body {
@@ -55,7 +53,7 @@ aside .inner, main .inner {
   padding: 20px;
 }
 main .inner {
-  padding-bottom: 325px;
+  padding-bottom: 315px;
 }
 
 h1 {
