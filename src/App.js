@@ -97,7 +97,6 @@ class Experience extends React.Component {
         </ul>
         <h3><Job jobTitle="LiveRamp - Desktop Support Technician " /></h3>
         <ul>
-          <li><Job jobDate="" jobSummary="Redesigned company's main website to flow simpler for users" /></li>
           <li><Job jobSummary="Educated users on a wide array of devices including: Macs, iPhones, Windows, Androids, and printers"/></li>
           <li><Job jobSummary="Administered conference rooms through BlueJeans Admin, Teem and Google Admin to ensure quality AV"/></li>
           <li><Job jobSummary="Composed processes for new users to reduce downtime for common issue" /></li>
