@@ -83,10 +83,10 @@ class Experience extends React.Component {
         <h2 className="text-uppercase"><i className="fa fa-lg fa-building"></i>WORK EXPERIENCE</h2>
         <h3><Job jobTitle="Victorise - Software Engineer Intern"/></h3>
         <ul>
-          <li><Job jobDate="" jobSummary="Improve apps response time by debugging bugs"/></li>
-          <li><Job jobSummary="Composed data scripts to be used throughout app"/></li>
-          <li><Job jobSummary="Analyzed Augmented Reality avenues for app"/></li>
-          <li><Job jobSummary="Deliver quality code on time"/></li>
+          <li><Job jobDate="" jobSummary="Improve apps response time by removing redundant code in view layers"/></li>
+          <li><Job jobSummary="Composed scripts with Selenium that added over a thousand biking trails for more app utility"/></li>
+          <li><Job jobSummary="Deployed AR feature to see gps coordinates on camera overlay"/></li>
+          <li><Job jobSummary="Delivered quality and documented code within critical time periods"/></li>
         </ul>
         <h3><Job jobTitle="Superfoodbox - Web Developer Intern " /></h3>
         <ul>
